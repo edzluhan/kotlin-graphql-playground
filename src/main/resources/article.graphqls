@@ -10,6 +10,6 @@ type Article {
 
 type Mutation {
     newArticle(title: String!, content: String!) : Article!
-    deleteSnack(id: ID!) : Boolean
-    updateSnack(id:ID!, title: String!, content: String!) : Article!
+    deleteArticle(id: ID!) : Boolean
+    updateArticle(id:ID!, title: String!, content: String!) : Article!
 }
