@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysqlsrv:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "kotlin_graphql"
+    ports:
+      - "3306:3306"
+    volumes:
+      - /Users/eduardo/Projects/kotlin-graphql/mysqlVolume:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
