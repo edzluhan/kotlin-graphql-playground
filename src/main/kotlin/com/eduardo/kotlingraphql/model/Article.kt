@@ -13,8 +13,8 @@ data class Article (
         val id: Long,
 
         @get: NotBlank
-        val title: String = "",
+        var title: String = "",
 
         @get: NotBlank
-        val content: String = ""
+        var content: String = ""
 )

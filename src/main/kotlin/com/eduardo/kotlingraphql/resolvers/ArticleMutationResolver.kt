@@ -18,12 +18,14 @@ class ArticleMutationResolver (private val repository: ArticleRepository): Graph
         return true
     }
 
-    fun updateArticle(id:Long, title:String, content: String): Article {
+    fun updateArticle(id:Long, title:String, content: String) : Article {
         val article = repository.findById(id)
         article.ifPresent {
-            val updatedArticle = Article(id, title, content)
-            repository.save(updatedArticle)
+            it.title = title
+            it.content = content
+            repository.save(it)
         }
+
         return article.get()
     }
 }
