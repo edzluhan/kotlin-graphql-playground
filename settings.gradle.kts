@@ -1,1 +1,1 @@
-rootProject.name = "kotlin-graphql"
+rootProject.name = "kotlingraphql"
