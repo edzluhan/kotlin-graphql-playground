@@ -1,0 +1,15 @@
+type Query {
+    articles: [Article]
+}
+
+type Article {
+    id: ID!
+    title: String
+    content: String
+}
+
+type Mutation {
+    newArticle(title: String!, content: String!) : Article!
+    deleteSnack(id: ID!) : Boolean
+    updateSnack(id:ID!, title: String!, content: String!) : Article!
+}
